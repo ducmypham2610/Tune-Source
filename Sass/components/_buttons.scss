@@ -1,0 +1,26 @@
+.btn:link,
+.btn:visited {
+    font-size: 1.6rem;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-weight: 300;
+    border-radius: 20rem;
+    -webkit-border-radius: 20rem;
+    -moz-border-radius: 20rem;
+    -ms-border-radius: 20rem;
+    -o-border-radius: 20rem;
+    word-spacing: .4rem;
+    transition: backgroundcolor .2s, border .2s, color .2s;
+    -webkit-transition: backgroundcolor .2s, border .2s, color .2s;
+    -moz-transition: backgroundcolor .2s, border .2s, color .2s;
+    -ms-transition: backgroundcolor .2s, border .2s, color .2s;
+    -o-transition: backgroundcolor .2s, border .2s, color .2s;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: .1rem solid $color-white;
+    color: $color-primary;
+    background-color: $color-white;
+}

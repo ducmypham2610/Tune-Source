@@ -1,0 +1,15 @@
+.container {
+  background-color: $color-black;
+  max-width: 120rem;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-rows: 50vh minmax(min-content, 22rem) min-content;
+  grid-template-columns: repeat(8, [col-start] minmax(min-content, 14rem) [col-end]);
+  gap: 3rem;
+  height: 130vh;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-template-rows: 40vh minmax(min-content, 22rem) min-content;
+  }
+}

@@ -1,0 +1,84 @@
+.section-songs {
+    background-color: $color-primary;
+    padding: 3rem 4rem;
+    text-align: center;
+    grid-column: col-start 1 / col-end 8;
+    grid-row: 2 / -1;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    justify-content: space-around;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        padding: 2rem 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+
+
+    &__heading{
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+    
+    &__box{
+        padding: 2rem;
+        background-image: linear-gradient(to right, #7ed56f, #28b485);;
+        border-radius: 2rem;
+        -webkit-border-radius: 2rem;
+        -moz-border-radius: 2rem;
+        -ms-border-radius: 2rem;
+        -o-border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: .5rem;
+            height: auto;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            padding: .5rem;
+        }
+}
+
+    &__img {
+        height: 20rem;
+        width: 20rem;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+
+        @media only screen and (max-width: $bp-medium) {
+            height: 15rem;
+            width: 15rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            height: 12rem;
+            width: 12rem;
+        }
+    }
+
+    &__audio {
+        width: 80%;
+        border-radius: 5rem;
+        -webkit-border-radius: 5rem;
+        -moz-border-radius: 5rem;
+        -ms-border-radius: 5rem;
+        -o-border-radius: 5rem;
+    }
+}

@@ -1,0 +1,158 @@
+.header {
+  background-color: $color-secondary;
+  grid-column: col-start 1/ -1;
+  grid-row: 1 /2;
+  padding: 1rem 2rem 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-image:url(https://c4.wallpaperflare.com/wallpaper/844/850/559/abel-tesfaye-the-weeknd-xo-starboy-wallpaper-preview.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius:3rem ;
+  -webkit-border-radius:3rem ;
+  -moz-border-radius:3rem ;
+  -ms-border-radius:3rem ;
+  -o-border-radius:3rem ;
+}
+
+.search {
+  flex: 0 0 40%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__input {
+    font-family: inherit;
+    font-size: 1.6rem;
+    color: $color-grey-dark-1;
+    background-color: $color-grey-light-2;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    width: 90%;
+    margin-right: -3.25rem;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: $color-grey-light-2;
+    }
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: $color-black;
+    }
+  }
+
+  &__button {
+    border: none;
+    outline: none;
+    background-color: $color-tertiary;
+    margin-right: -5rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    color: $color-grey-light-1;
+  }
+}
+
+.user-nav {
+  align-self: stretch;
+
+  display: flex;
+  align-items: flex-start;
+
+  & > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+  }
+
+  &__notification {
+    font-size: 1.3rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: $color-tertiary;
+    color: $color-white;
+    position: absolute;
+    top: -0.2rem;
+    right: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__user-photo {
+    height: 3.75rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 1rem;
+  }
+
+  &__user-name {
+    font-size: 1.5rem;
+    font-family: inherit;
+    margin-top: 0.9rem;
+    color: $color-white;
+  }
+}
+
+.user-nav__user {
+  position: relative;
+  display: inline-block;
+}
+
+.user-nav__drop {
+  display: none;
+  position: absolute;
+  background-color: $color-primary;
+  min-width: 10rem;
+  z-index: 1;
+
+  &-list {
+    list-style: none;
+  }
+
+  &-item {
+    display: block;
+  }
+
+  &-link {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: $color-tertiary;
+  }
+}
+
+.user-nav__user:hover .user-nav__drop {
+  display: block;
+}

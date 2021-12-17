@@ -1,0 +1,204 @@
+<?php
+    session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Tune Source - All songs</title>
+</head>
+<body class="container">
+<div class="side--bar">
+      <img src="./img/logo.png" alt="Logo" class="side--bar__logo" />
+      <!-- menu -->
+      <div class="side--bar__menu">
+        <h3 class="heading__tertiary color-primary">Menu</h3>
+        <ul class="side--bar__nav">
+          <li class="side--bar__item--active side--bar__item">
+            <a href="index.php" class="side--bar__link">
+              <svg class="side--bar__icon">
+                <use xlink:href="./img/sprite.svg#icon-compass2"></use>
+                <span>Explore</span>
+              </svg>
+            </a>
+          </li>
+          <li class="side--bar__item">
+            <a href="" class="side--bar__link">
+              <svg class="side--bar__icon">
+                <use xlink:href="./img/sprite.svg#icon-volume-medium"></use>
+                <span>Genres</span>
+              </svg>
+            </a>
+          </li>
+          <li class="side--bar__item">
+            <a href="allsong.php" class="side--bar__link">
+              <svg class="side--bar__icon">
+                <use xlink:href="./img/sprite.svg#icon-photo_album"></use>
+                <span>Top songs</span>
+              </svg>
+            </a>
+          </li>
+          <li class="side--bar__item">
+            <a href="" class="side--bar__link">
+              <svg class="side--bar__icon">
+                <use xlink:href="./img/sprite.svg#icon-mic"></use>
+                <span>Artists</span>
+              </svg>
+            </a>
+          </li>
+          <li class="side--bar__item">
+            <a href="" class="side--bar__link">
+              <svg class="side--bar__icon">
+                <use xlink:href="./img/sprite.svg#icon-podcast"></use>
+                <span>Radio</span>
+              </svg>
+            </a>
+          </li>
+          <li class="side--bar__item">
+            <a href="cart.php" class="side--bar__link">
+              <svg class="side--bar__icon">
+                <use xlink:href="./img/sprite.svg#icon-volume-medium"></use>
+                <span>Shopping cart</span>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!--Side bar library-->
+      <div class="side--bar__library">
+        <h3 class="heading__tertiary color-primary">Library</h3>
+        <ul class="side--bar__nav">
+          <li class="side--bar__item">
+            <a href="" class="side--bar__link">
+              <svg class="side--bar__icon">
+                <use xlink:href="./img/sprite.svg#icon-history"></use>
+                <span>Recent</span>
+              </svg>
+            </a>
+          </li>
+          <li class="side--bar__item">
+            <a href="" class="side--bar__link">
+              <svg class="side--bar__icon">
+                <use xlink:href="./img/sprite.svg#icon-radio-checked"></use>
+                <span>Albums</span>
+              </svg>
+            </a>
+          </li>
+          <li class="side--bar__item">
+            <a href="playlist.php" class="side--bar__link">
+              <svg class="side--bar__icon">
+                <use xlink:href="./img/sprite.svg#icon-heart"></use>
+                <span>Favourites</span>
+              </svg>
+            </a>
+          </li>
+          <li class="side--bar__item">
+            <a href="" class="side--bar__link">
+              <svg class="side--bar__icon">
+                <use xlink:href="./img/sprite.svg#icon-folder"></use>
+                <span>Local</span>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!--Side bar playlist-->
+      <div class="side--bar__playlist">
+        <h3 class="heading__secondary color-primary">Playlist</h3>
+        <ul class="side--bar__nav">
+          <li class="side--bar__item">
+            <a href="" class="side--bar__link">
+              <svg class="side--bar__icon">
+                <use xlink:href="./img/sprite.svg#icon-plus"></use>
+                <span>Create new</span>
+              </svg>
+            </a>
+          </li>
+          <li class="side--bar__item">
+            <a href="" class="side--bar__link">
+              <svg class="side--bar__icon">
+                <use xlink:href="./img/sprite.svg#icon-playlist"></use>
+                <span>Imagine Dragons</span>
+              </svg>
+            </a>
+          </li>
+          <li class="side--bar__item">
+            <a href="" class="side--bar__link">
+              <svg class="side--bar__icon">
+                <use xlink:href="./img/sprite.svg#icon-playlist"></use>
+                <span>Coldplay</span>
+              </svg>
+            </a>
+          </li>
+          <li class="side--bar__item">
+            <a href="" class="side--bar__link">
+              <svg class="side--bar__icon">
+                <use xlink:href="./img/sprite.svg#icon-playlist"></use>
+                <span>The Script</span>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!--Header-->
+    <header class="header">
+      <form action="#" class="search">
+        <input type="text" class="search__input" placeholder="Search..." />
+        <input type="submit" name="search" value="Search" class="search__button">
+      </form>
+      <nav class="user-nav">
+      <div class="user-nav__user">
+          <img
+            src="./img/user.png"
+            alt="User photo"
+            class="user-nav__user-photo"
+          />
+          <span class="user-nav__user-name"><?php
+                    include ("connect.php");
+                    if(isset($_SESSION['username'])){
+                        $username = $_SESSION['username'];
+                        echo "
+                        $username";
+                    }
+          ?></span>
+
+          <div class="user-nav__drop">
+          <ul class="user-nav__drop-list">
+            <li class="user-nav__drop-item"><a href="logout.php" class="user-nav__drop-link">Setting</a></li>
+            <li class="user-nav__drop-item"><a href="logout.php" class="user-nav__drop-link">Login</a></li>
+            <li class="user-nav__drop-item"><a href="logout.php" class="user-nav__drop-link">Logout</a></li>
+          </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="manage">
+        <div class="manage__box">
+            <a href="" class="btn manage__btn">Add new account</a>
+        </div>
+        <div class="manage__box">
+            <a href="" class="btn manage__btn">Edit information</a>
+        </div>
+        <div class="manage__box">
+            <a href="" class="btn manage__btn">Remove account</a>
+        </div>
+    </section>
