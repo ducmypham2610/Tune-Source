@@ -1,5 +1,5 @@
 <?php
-$servername = "3.132.234.157";
+$servername = "172.31.26.189";
     $username = "ducmy";
     $password = "123@123a";
     $database = "tunesource";
